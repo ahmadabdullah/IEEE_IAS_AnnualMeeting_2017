@@ -172,6 +172,47 @@ byancey@epeconsulting.com
 \end_inset
 
 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+and 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Name
+status collapsed
+
+\begin_layout Plain Layout
+Mahdi
+\begin_inset space ~
+\end_inset
+
+Kefayati
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status collapsed
+
+\begin_layout Plain Layout
+Electric Power Engineers, Inc
+\begin_inset Newline newline
+\end_inset
+
+mkefayati@epeconsulting.com
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Abstract
@@ -1039,8 +1080,16 @@ reference "fig:Grid-side-frequency"
 .
  Note that the grid frequency scan is the same for both the cases when all
  switched shunts are OFF or ON.
- The grid side frequency scan for all contingency cases are shown in $$$.
- 
+ The grid side frequency scan for all contingency cases are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Grid-side-frequency-1"
+
+\end_inset
+
+.
+ It is to be noted that the grid has relatively small impedance even under
+ the base case with no contingencies 
 \begin_inset Float figure
 wide false
 sideways false
@@ -1063,6 +1112,46 @@ Grid side frequency scan with no contingencies (Impedance is in per unit
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Grid-side-frequency"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename artwork/sysReport.tiff
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grid side frequency scan for all contingencies considered along with their
+ sensitivities 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grid-side-frequency-1"
 
 \end_inset
 
@@ -1153,6 +1242,10 @@ reference "fig:Project-side-frequency_100_seriesON"
 
 for 10% and 100% output, respectively with and without the series compensation
  software.
+ The series compensation firmware being engaged shows a benefit in shifting
+ the low resistance point of the wind turbine to be further away from the
+ typical SSO resonance point and therefore was recommended to be engaged
+ for the liftetime of the project.
  
 \begin_inset Float figure
 wide false
@@ -1335,16 +1428,68 @@ name "subsec:Combined-Frequency-Scan"
 \end_layout
 
 \begin_layout Standard
-The system frequency scans given in $$ and the project frequency scans shown
- previously 
+The system frequency scans given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Grid-side-frequency-1"
+
+\end_inset
+
+ and the project frequency scans shown previously 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "subsec:Project-Side-Frequency"
 
 \end_inset
 
- are combined in $$.
+ are combined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Combined-gird-and"
+
+\end_inset
+
+for both the 10% and 100% project output.
  
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename artwork/ssrStudy_On_100.tiff
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Combined gird and project frequency scan
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Combined-gird-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1366,10 +1511,6 @@ ion firmware engaged for all contingency conditions along with the sensitivities
 We concluded that the WP is unlikely to be susceptible to SSO for all cases
  considered even when the wind project is not equipped with the series compensat
 ion firmware.
- The series compensation firmware being engaged shows a benefit in shifting
- the low resistance point of the wind turbine to be further away from the
- typical SSO resonance point and therefore was recommended to be engaged
- for the liftetime of the project.
  
 \end_layout
 
@@ -1618,16 +1759,16 @@ reference "fig:Voltage-at-POI"
 , the instantaneous voltage at the POI is beyond the high voltage ride through
  capability of any ISO.
  It is to be noted that the surge arrester at the POI is not able to clip
- down the voltage to acceptable values due to the unusually high amount
- of reactive power that is absorbed by the project.
+ the voltage to acceptable values due to the unusually high amount of reactive
+ power that is absorbed by the project.
  
 \end_layout
 
 \begin_layout Standard
 Root cause analysis has shown that the reactive power is being pushed from
- the series capacitor banks to the project.
- The TSO has designed the protection of all of the capacitor banks in the
- system such that they ride thorough the most serve fault.
+ the series capacitor banks to the project after clearing the fault.
+ The TSO has designed the protection of all of the series capacitor banks
+ in the system such that they ride through the most severe fault.
  A fault in line A-B is not an exception to this.
  This is mainly done for stability enhancement and increasing the power
  transfer capability in the region under certain loading and generation
@@ -1650,13 +1791,13 @@ reference "fig:Fault-and-clearing"
  power as a result.
  However, once the fault is cleared by opening the circuit breakers at both
  ends of the line A-B, the voltage across the capacitor bank returns to
- normal which is around 35 kV.
- Since the voltage across the capacitor cannot change instantaneous, the
+ normal which is around 27 kV.
+ Since the voltage across the capacitor cannot change instantaneously, the
  capacitor bank releases the previously stored energy back to the system
  in both directions and the voltage across the capacitor bank starts to
  overshoot.
- Since the WP is radially connected and very close electrically to the WP,
- it attracts most of the reactive power.
+ Since the WP is radially connected and very close electrically to the series
+ capacitor banks, it attracts most of the reactive power.
  The reactive power absorbed greatly exceeds capability of the the turbines
  and they trip offline as a result.
  
@@ -1677,7 +1818,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fault and clearing the fault on line A-B
+Clearing the fault on line A-B
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Fault-and-clearing"
@@ -1738,8 +1879,6 @@ Acknowledgment
 \begin_layout Standard
 The authors would like to thank Dustin Howard and Nath Venkit of GE for
  their help and support throughout the study.
- The authors also would like to thank Mahdi Kefayati of EPE for producing
- some of the artwork in this paper.
  
 \end_layout
 

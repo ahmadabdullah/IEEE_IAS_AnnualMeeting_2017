@@ -1136,10 +1136,14 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename artwork/sysReport.tiff
-	scale 30
+	filename artwork/base Freq scan.png
+	scale 40
 
 \end_inset
 
@@ -1242,10 +1246,6 @@ reference "fig:Project-side-frequency_100_seriesON"
 
 for 10% and 100% output, respectively with and without the series compensation
  software.
- The series compensation firmware being engaged shows a benefit in shifting
- the low resistance point of the wind turbine to be further away from the
- typical SSO resonance point and therefore was recommended to be engaged
- for the liftetime of the project.
  
 \begin_inset Float figure
 wide false
@@ -1414,44 +1414,6 @@ name "fig:Project-side-frequency_100_seriesON"
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename artwork/ssrStudy_On_10.tiff
-	lyxscale 40
-	width 50text%
-	height 20pheight%
-	keepAspectRatio
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Combined gird and project frequency scan
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Combined-gird-and"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -1487,8 +1449,51 @@ reference "fig:Combined-gird-and"
 
 \end_inset
 
- for both the 10% and 100% project output.
+.
  
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename artwork/base Freq scan.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Combined gird and project frequency scan
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Combined-gird-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1510,6 +1515,10 @@ ion firmware engaged for all contingency conditions along with the sensitivities
 We concluded that the WP is unlikely to be susceptible to SSO for all cases
  considered even when the wind project is not equipped with the series compensat
 ion firmware.
+ The series compensation firmware being engaged shows a benefit in shifting
+ the low resistance point of the wind turbine to be further away from the
+ typical SSO resonance point and therefore was recommended to be engaged
+ for the liftetime of the project.
  
 \end_layout
 
