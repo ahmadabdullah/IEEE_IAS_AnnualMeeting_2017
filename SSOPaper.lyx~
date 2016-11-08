@@ -264,25 +264,10 @@ With the increased penetration of renewable energy into the grid, special
 \begin_layout Standard
 SSO has become a concern to independent System Operators (ISOs) and Transmission
  System Operators (TSOs) since the two incidents of shaft damage experienced
- at the Mohave generating station in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "hall1976experience"
-
-\end_inset
-
-.
+ at the Mohave generating station.
  The subject has received renewed attention due to the incident that occurred
- in Texas on Oct.
- 22, 2009 which revealed that wind turbines can be also be affected by SSO
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "belkin2010event"
-
-\end_inset
-
-.
+ in Texas in 2009 which revealed that wind turbines can be also be affected
+ by SSO.
  
 \end_layout
 
@@ -1417,16 +1402,15 @@ name "fig:Project-side-frequency_100_seriesON"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename artwork/ssrStudy_On_10.tiff
 	lyxscale 40
-	width 50text%
-	height 20pheight%
-	keepAspectRatio
+	width 40text%
+	height 30pheight%
 
 \end_inset
 
@@ -1434,7 +1418,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Combined gird and project frequency scan
+Combined gird and project frequency scan (10% output in the top and 100%
+ in the lower graph)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Combined-gird-and"
@@ -1868,16 +1853,6 @@ An study has been performed to assess whether the WP under construction
  power surge coming back from the series capacitors after the fault is cleared.
  The project was thus not susceptible to SSO.
  The ISO was notified of the findings and approved the study.
- 
-\end_layout
-
-\begin_layout Section*
-Acknowledgment 
-\end_layout
-
-\begin_layout Standard
-The authors would like to thank Dustin Howard and Nath Venkit of GE for
- their help and support throughout the study.
  
 \end_layout
 
