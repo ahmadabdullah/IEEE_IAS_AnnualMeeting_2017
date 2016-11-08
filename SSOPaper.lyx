@@ -1863,6 +1863,16 @@ An study has been performed to assess whether the WP under construction
  
 \end_layout
 
+\begin_layout Section*
+Acknowledgment 
+\end_layout
+
+\begin_layout Standard
+The authors would like to thank Dustin Howard and Nath Venkit of GE for
+ their help and support throughout the study.
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
