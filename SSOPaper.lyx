@@ -216,24 +216,22 @@ mkefayati@epeconsulting.com
 \end_layout
 
 \begin_layout Abstract
-Due to the recent sub-synchronous oscillations (SSO) event in the Texas,
- most ISOs have instituted that any new wind project (WP) must perform an
- SSO study and that study must be approved before energization and commercial
- date.
- A wind project was constructed close to a series capacitor bank.
- Under certain N-1 conditions, the project becomes radially connected to
- those series capacitor banks.
- A frequency scan screening study was performed and indicated that there
- is no risk of SSO.
- A detailed electromagnetic transient (EMT) study was performed to confirm
- the findings of the frequency screening study.
- EMT simulations showed that the wind project will trip offline after clearing
- the fault on the line the outage of which causes the project to be radially
- connected to the series capacitor banks.
- Root cause analysis was performed to determine the reason of this trip.
- Investigations concluded that the project trips due to voltage and reactive
- power issues because of its existence close to the series capacitor banks
- but not due to SSO.
+Due to the recent sub-synchronous oscillations (SSO) events, most independent
+ system operators (ISO) require a study that demonstrates immunity of wind
+ projects with respect to SSO prior to energization.
+ For this study, we consider a wind project sited in proximity of a series
+ compensated transmission line, where it becomes radially connected under
+ certain N-1 conditions.
+ Using a frequency scan screening and a detailed electromagnetic transient
+ (EMT) study we show that the project is immune to SSO.
+ However, the EMT results show that clearing a fault on the transmission
+ line that leads to a radial connection of the wind project to the series
+ compensated transmission line causes the project to trip offline due to
+ voltage and reactive power issues stemming from the proximity of the project
+ to the series capacitor bank but not due to SSO.
+ We conclude that the impact of proximity of series capacitors and wind
+ projects need to be investigated beyond SSO for reliable operation of the
+ grid.
  
 \end_layout
 
@@ -1860,16 +1858,6 @@ An study has been performed to assess whether the WP under construction
  power surge coming back from the series capacitors after the fault is cleared.
  The project was thus not susceptible to SSO.
  The ISO was notified of the findings and approved the study.
- 
-\end_layout
-
-\begin_layout Section*
-Acknowledgment 
-\end_layout
-
-\begin_layout Standard
-The authors would like to thank Dustin Howard and Nath Venkit of GE for
- their help and support throughout the study.
  
 \end_layout
 

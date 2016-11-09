@@ -34,4 +34,12 @@
   pages   = {22--29},
 }
 
+@InProceedings{belkin2010event,
+  author    = {Belkin, P},
+  title     = {Event of 10-22-09},
+  booktitle = {CREZ Technical Conference, January},
+  year      = {2010},
+  volume    = {26},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
