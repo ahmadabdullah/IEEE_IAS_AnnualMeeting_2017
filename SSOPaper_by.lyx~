@@ -253,7 +253,7 @@ name "sec:Introduction"
 
 \begin_layout Standard
 Increased penetration of renewable energy resources into the grid has resulted
- in higher demand for special system studies to assess its impact on various
+ in higher demand for special system studies to assess their impact on various
  aspects of the power system.
  One of these studies is sub-synchronous oscillations (SSO) study.
  
@@ -271,8 +271,14 @@ key "hall1976experience"
 
 .
  The subject has received renewed attention due to the incident that occurred
- in Texas in 2009 which revealed that wind turbines can be also be affected
- by SSO.
+ in Texas in 2009 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "belkin2010event"
+
+\end_inset
+
+ which revealed that wind turbines can be also be affected by SSO.
  
 \end_layout
 
@@ -1402,7 +1408,7 @@ name "fig:Project-side-frequency_100_seriesON"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
