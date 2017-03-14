@@ -1597,7 +1597,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../Desktop/SSO_Paper/SSO_Paper/artwork/currents.PNG
+	filename artwork/currents.PNG
 	scale 60
 
 \end_inset
@@ -1639,7 +1639,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../Desktop/SSO_Paper/SSO_Paper/artwork/MW and MVAr.PNG
+	filename artwork/MW and MVAr.PNG
 	scale 60
 
 \end_inset
@@ -1676,13 +1676,9 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../Desktop/SSO_Paper/SSO_Paper/artwork/voltage.PNG
+	filename artwork/voltage.PNG
 	scale 60
 
 \end_inset
@@ -1796,7 +1792,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../Desktop/SSO_Paper/SSO_Paper/artwork/cap.tif
+	filename artwork/cap.tif
 	scale 60
 
 \end_inset

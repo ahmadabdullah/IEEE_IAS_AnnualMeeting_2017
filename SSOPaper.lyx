@@ -1858,7 +1858,7 @@ A study has been performed to assess whether the WP under construction will
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "../../../Desktop/SSO_Paper/SSO_Paper/refs"
+bibfiles "refs"
 options "IEEEtran"
 
 \end_inset
