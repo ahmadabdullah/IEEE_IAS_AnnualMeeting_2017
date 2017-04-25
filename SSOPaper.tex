@@ -1,7 +1,7 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[twocolumn,conference]{IEEEtran}
-\usepackage[LGR,T1]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{refstyle}
 \usepackage{booktabs}
@@ -24,11 +24,6 @@
 \AtBeginDocument{\providecommand\figref[1]{\ref{fig:#1}}}
 \AtBeginDocument{\providecommand\subsecref[1]{\ref{subsec:#1}}}
 \AtBeginDocument{\providecommand\tabref[1]{\ref{tab:#1}}}
-\DeclareRobustCommand{\greektext}{%
-  \fontencoding{LGR}\selectfont\def\encodingdefault{LGR}}
-\DeclareRobustCommand{\textgreek}[1]{\leavevmode{\greektext #1}}
-\ProvideTextCommand{\~}{LGR}[1]{\char126#1}
-
 %% Because html converters don't know tabularnewline
 \providecommand{\tabularnewline}{\\}
 \RS@ifundefined{subsecref}
@@ -52,7 +47,7 @@
 
 \begin{document}
 
-\title{A Sub-Synchronous Oscillations Study for a Wind Farm}
+\title{Building Wind Farms Next to Series Capacitor Banks: Lessons Learned}
 
 \author{\IEEEauthorblockN{Ahmad~Abdullah}\IEEEauthorblockA{Electric Power Engineers, Inc\\
 \& Department of Electrical Power and Machines \\
@@ -62,49 +57,53 @@ byancey@epeconsulting.com}\and \IEEEauthorblockN{Mahdi~Kefayati}\IEEEauthorblock
 mkefayati@epeconsulting.com}}
 \maketitle
 \begin{abstract}
-Due to the recent sub-synchronous oscillations (SSO) event in the
-Texas, most ISOs have instituted that any new wind project (WP) must
-perform an SSO study and that study must be approved before energization
-and commercial date. A wind project was constructed close to a series
-capacitor bank. Under certain N-1 conditions, the project becomes
-radially connected to those series capacitor banks. A frequency scan
-screening study was performed and indicated that there is no risk
-of SSO. A detailed electromagnetic transient (EMT) study was performed
-to confirm the findings of the frequency screening study. EMT simulations
-showed that the wind project will trip offline after clearing the
-fault on the line the outage of which causes the project to be radially
-connected to the series capacitor banks. Root cause analysis was performed
-to determine the reason of this trip. Investigations concluded that
-the project trips due to voltage and reactive power issues because
-of its existence close to the series capacitor banks but not due to
-SSO. 
+Due to the recent sub-synchronous oscillations (SSO) events, most
+independent system operators (ISO) require a study that demonstrates
+immunity of wind projects with respect to SSO prior to energization.
+For this study, we consider a wind project sited in proximity of a
+series compensated transmission line, where it becomes radially connected
+to it under certain N-1 contingency conditions. Using a frequency
+scan screening and a detailed electromagnetic transient (EMT) study
+we show that the project is immune to SSO. However, the EMT results
+show that clearing a fault on the transmission line that leads to
+a radial connection of the wind project to the series compensated
+transmission line causes the project to trip offline due to voltage
+and reactive power issues stemming from the proximity of the project
+to the series capacitor bank but not due to SSO. We conclude that
+the impact of proximity of series capacitors and wind projects needs
+to be investigated beyond SSO for reliable operation of the grid. 
 \end{abstract}
 
 \begin{IEEEkeywords}
-Subsynchronous oscillations, Electromagnetic transients, frequency
+Sub-synchronous oscillations, Electromagnetic transients, frequency
 response, wind farms, series capacitors
 \end{IEEEkeywords}
 
 
 \section{Introduction\label{sec:Introduction}}
 
-With the increased penetration of renewable energy into the grid,
-special system studies are called upon to assess their impact on various
-aspects of the power system. One of these studies is subsynchronous
-oscillations study. 
+Increased penetration of renewable energy resources into the grid
+has resulted in higher demand for special system studies to assess
+their impact on various aspects of the power system. One of these
+studies is sub-synchronous oscillations (SSO) study. 
 
-SSO has become a concern to independent System Operators (ISOs) and
-Transmission System Operators (TSOs) since the two incidents of shaft
+SSO has become a concern to Independent System Operators (ISO) and
+Transmission System Operators (TSO) since the two incidents of shaft
 damage experienced at the Mohave generating station \cite{hall1976experience}.
 The subject has received renewed attention due to the incident that
-occurred in Texas in 2009 which revealed that wind turbines can be
-also be affected by SSO. 
+occurred in Texas in 2009 \cite{belkin2010event} which revealed that
+wind turbines can be also be affected by SSO. 
 
-Due to that, most ISOs today have grid codes that mandate performing
-an SSO study before the commercial date of wind projects. In this
-paper, we report on a study that has been done for one such projects. 
+As a results of these incidents, most ISOs have grid codes that mandate
+completion of a study indicating immunity of the project to SSO before
+commercial operation of wind projects. In this paper, we present one
+such study and demonstrate the effectiveness of it. Moreover, we establish
+the advantages of more detailed Electromagnetic Transient (EMT) study
+and demonstrate that further steps are needed to establish secure
+and reliable operation of the project due to the other challenges
+posed by proximity of wind projects (WP) to series capacitors. 
 
-The paper is organized as follows: the system model is descried in
+This paper is organized as follows: the system model is descried in
 \secref{System-Model}. The frequency scan study is provided in \secref{Frequency-Scan-Screening}.
 The detailed EMT study is presented in \secref{Detailed-EMT-Study}.
 The trip of the project after clearing the fault on the line connecting
@@ -113,19 +112,19 @@ Conclusions are summarized at the end of the paper.
 
 \section{System Model \label{sec:System-Model}}
 
-The system model is shown in \figref{Area-under-study}. The project
-is connected at bus A. The latest system model available from the
-ISO was employed for this analysis. The authors developed an equivalent
+The system model is shown in \figref{Area-under-study}. The WP is
+connected at bus A. The latest system model available from the ISO
+was employed for this analysis. The authors developed an equivalent
 model representation of the ISO system model to include the series
 compensation devices as well as surrounding buses such that the frequency
-scan performed at the POI has negligible changes when adding more
-of the ISO transmission network. This model was developed by converting
-the PSS\textregistered E load flow case into PSCAD\texttrademark{}
-. The area of interest to be analyzed as part of the SSO study is
-shown in \figref{Area-under-study}. It should be kept in mind that
-the buses in \figref{Area-under-study} are only a fraction of the
-buses that are included in the PSCAD\texttrademark{} model as will
-be explained below.
+scan performed at the point of interconnection (POI) has negligible
+changes when adding a more detailed model of the transmission network.
+This model is developed by converting the PSS\textregistered E load
+flow case into a PSCAD\texttrademark{} dynamic model. The area of
+interest to be analyzed as part of the SSO study is shown in \figref{Area-under-study}.
+It should be noted that the buses in \figref{Area-under-study} are
+only a fraction of the buses included in the PSCAD\texttrademark{}
+model.
 \begin{figure}[h]
 \centering{}\includegraphics[scale=0.3]{artwork/SLD}\caption{Area under study\label{fig:Area-under-study}}
 \end{figure}
@@ -139,7 +138,7 @@ model was prepared for translation by running a load flow study including
 the WP to control the voltage at the POI. The authors then selected
 the buses shown in \figref{Area-under-study} within the PSS\textregistered E
 power flow case for direct inclusion in the PSCAD\texttrademark{}
-case. Afterwards, we performed a frequency scan in the PSCAD\texttrademark{}
+case. Afterwards, a frequency scan was performed in the PSCAD\texttrademark{}
 case at the POI of the project. The authors then added new buses from
 all directions around the WP until the frequency scan did not change
 in an appreciable manner from one scan to another as a result of the
@@ -152,35 +151,32 @@ no generators other than WP were modeled in detail for this study;
 any generator translated into PSCAD\texttrademark{} was modeled as
 an ideal voltage source behind an impedance.
 
-Additionally, we modeled all of the series capacitor banks in \figref{Area-under-study}
-with a proprietary protection model provided by the TSO. The model
-has been set up according with the settings provided by TSO. It should
-be noted that all the series capacitor banks shown in \figref{Area-under-study}
-are always 24 \textgreek{W} per the information provided by the TSO.
-It should be noted that the series capacitors are compensation more
-than 100\% of the line length in all cases. 
+We modeled all of the series capacitor banks in \figref{Area-under-study}
+with a protection model provided by the TSO. The model has been set
+up according with the settings provided by TSO. It should be noted
+that all the series capacitor banks shown in \figref{Area-under-study}
+are a fixed impedance per the information provided by the TSO. It
+should be noted that the series capacitors have a compensation of
+more than 100\% of the line length in all cases. 
 
 A detailed model of WP was developed in PSCAD\texttrademark . The
 detailed model contains all project equipment up to the high side
-of the project main power transformer. Additionally, this model includes
-the ability to activate and deactivate the feeder circuit breakers,
-shunt reactive devices, and the series compensation firmware. The
-transmission tie line was added to the output of the detailed model
-to complete the WP. The WP was assumed to operate under normal configuration
-with all feeder breakers, shunt reactive devices and the series compensation
-option all turned ON. 
+of the project main power transformer. Moreover, this model includes
+the ability to control feeder circuit breakers, shunt reactive devices,
+and the adjustable control to mitigate SSO. The transmission tie line
+was added to the output of the detailed model to complete the WP.
+The WP is assumed to operate under normal configuration with all feeder
+breakers, shunt reactive devices and the SSO mitigation enabled. 
 
 Surge arresters were added at the POI of the project at bus A. It
 should be noted that all series capacitors in the ISO case are installed
 at the midpoint of the respective transmission lines. 
 
-Lastly, the WP detailed model was inserted into the ISO PSCAD\texttrademark{}
-equivalent model, described above at the POI at Bus A as shown in
-\figref{Area-under-study}, replacing the equivalent representation
-of the project created for the PSS\textregistered E load flow case.
-It should be noted that the wind turbines come with a proprietary
-software that can introduce synthetic inertia to the rotor in case
-SSO is detected. This has been modeled as well. 
+Finally, the WP detailed model was inserted into the PSCAD\texttrademark{}
+equivalent model based on the ISO provided model at bus A, replacing
+the equivalent representation of the project. The wind turbine model
+is capable of capturing synthetic inertia introduced to the rotor
+in case SSO is detected. 
 
 \section{Frequency Scan Screening Study\label{sec:Frequency-Scan-Screening}}
 
@@ -203,11 +199,11 @@ network at the project\textquoteright s POI for different contingency
 conditions, up to N-5, that may show vulnerability to SSO due to becoming
 radially connected to series compensation capacitors. 
 
-Additionally, for each of these contingencies, we evaluated various
-combinations of sensitivities. These sensitivities pertain to whether
-the turbine series compensation option is turned ON or OFF, whether
-the switched shunts provided in \tabref{Switched-Shunts-Sensitivities}
-are switched ON or OFF and whether the series capacitor banks in \figref{Area-under-study}
+Additionally, for each of these contingencies, various combinations
+of sensitivities were evaluated. These sensitivities pertain to whether
+the turbine SSO mitigation control is ON or OFF, whether the switched
+shunts provided in \tabref{Switched-Shunts-Sensitivities} are switched
+ON or OFF and whether the series capacitor banks in \figref{Area-under-study}
 are ON or OFF. 
 \begin{table}[h]
 \caption{Switched Shunts Sensitivities\label{tab:Switched-Shunts-Sensitivities}}
@@ -282,27 +278,27 @@ the system resistance is positive, albeit small.
 \subsection{Project Side Frequency Scan \label{subsec:Project-Side-Frequency}}
 
 A project side frequency scan of the WP was performed with and without
-the series compensation firmware to determine the total net impedance
-of the WP given its specifications. This frequency scan looked into
-the wind project from the POI and included the wind turbines, the
-most recent collection system design and layout as well as the current
-main power transformer and pad mount transformer specifications.
+the SSO mitigation control to determine the total net impedance of
+the WP given its specifications. This frequency scan looked into the
+WP from the POI and included the wind turbines, the most recent collection
+system design and layout as well as the current main power transformer
+and pad mount transformer specifications.
 
-The purpose of this study is to observe the impedance of the wind
-project over the range of frequencies under consideration to determine
-if the wind project provides a positive resistance at the POI to dampen
-out any resonance created from system disturbances.
+The purpose of this study is to observe the impedance of the WP over
+the range of frequencies under consideration to determine if the WP
+provides a positive resistance at the POI to dampen out any resonance
+created from system disturbances.
 
 The results from the project frequency scan shows that the reactance
 of the project is positive for all frequencies under study. The project
 frequency scans are shown in \figref{Project-side-frequency_10_seriesOFF},
 \figref{Project-side-frequency_100_seriesOFF}, \figref{Project-side-frequency_10_seriesON}and
 \figref{Project-side-frequency_100_seriesON}for 10\% and 100\% output,
-respectively with and without the series compensation software. The
-series compensation firmware being engaged shows a benefit in shifting
-the low resistance point of the wind turbine to be further away from
-the typical SSO resonance point and therefore was recommended to be
-engaged for the liftetime of the project. 
+respectively with and without the SSO mitigation control. The SSO
+mitigation control being engaged shows a benefit in shifting the low
+resistance point of the wind turbine to be further away from the typical
+SSO resonance point and therefore was recommended to be engaged for
+the liftetime of the project. 
 \begin{figure}[h]
 \begin{centering}
 \includegraphics[scale=0.6]{\string"artwork/frequency scan for 10% turbine output with series compensation option\string".eps}\caption{Project side frequency scan for 10\% turbine output without series
@@ -324,7 +320,6 @@ option\label{fig:Project-side-frequency_10_seriesON}}
 
 \end{figure}
 \begin{figure}[h]
-
 \begin{centering}
 \includegraphics[scale=0.6]{\string"artwork/for 100% turbine output with series compensation option\string".eps}\caption{Project side frequency scan for 100\% turbine output with series compensation
 option\label{fig:Project-side-frequency_100_seriesON}}
@@ -346,21 +341,20 @@ are combined in \figref{Combined-gird-and} for both the 10\% and
 The combined grid and project scans show that the combined reactance
 can become below zero from 0 Hz to 12 Hz of the frequency range under
 consideration for both the 10\% and 100\% dispatch levels with and
-without the series compensation firmware engaged for all contingency
-conditions along with the sensitivities considered. For the 10\% percent
-dispatch level, the combined resistance can become negative from 33
-Hz to 44 Hz in case the series compensation option is engaged and
-25 Hz to 34 Hz in case the compensation option is not engaged for
-the majority of the contingencies and sensitivities considered. Thus
-the combined resistance is never negative when the combined reactance
-crosses zero. 
+without the SSO mitigation control engaged for all contingency conditions
+along with the sensitivities considered. For the 10\% percent dispatch
+level, the combined resistance can become negative from 33 Hz to 44
+Hz in case the SSO mitigation control is engaged and 25 Hz to 34 Hz
+in case the SSO mitigation control is not engaged for the majority
+of the contingencies and sensitivities considered. Thus the combined
+resistance is never negative when the combined reactance crosses zero. 
 
 We concluded that the WP is unlikely to be susceptible to SSO for
 all cases considered even when the wind project is not equipped with
-the series compensation firmware. 
+the SSO mitigation control. 
 
 A detailed EMT study was then performed in \secref{Detailed-EMT-Study}
-to fully assess the susceptibility of WP for SSO for the N-1 contingency
+to fully assess the susceptibility of the WP for SSO for the N-1 contingency
 conditions and corresponding sensitivities. This is done to provide
 a firm answer on whether the negative resistance in case of the 10\%
 dispatch level can cause SSO and to answer whether the resistance
@@ -370,29 +364,31 @@ is high enough to damp any SSO in case the 100\% dispatch level.
 
 The system model was set up according to what has been mentioned in
 \secref{System-Model}. After that, we modified the PSCAD\texttrademark{}
-case manually by introducing a fault logic to the line A-B. The outage
-of this line causes the project to be radially connected to the series
-capacitor banks installed on the line A-C. The fault logic would create
-a bolted three phase to ground fault on the midpoint of the line A-B
-and clear the fault by opening the circuit breakers at both line ends
-after five (5) cycles. 
+case manually by introducing a fault logic to the transmission line
+from bus A to B. The outage of this line causes the project to be
+radially connected to the series capacitor banks installed on the
+transmission line from A to C. The fault logic would create a bolted
+three phase to ground fault on the midpoint of the transmission line
+from A to B and clear the fault by opening the circuit breakers at
+both line ends after five (5) cycles. 
 
 After that, the fault logic would be activated after the PSCAD\texttrademark{}
 case reaches steady state. In all of the cases in this study, it was
 found that the PSCAD\texttrademark{} cases reach steady state at 1.3
 seconds. The fault logic is then invoked at 1.3 seconds by creating
-the bolted three phase to ground fault on the midpoint of line A-B
-and then clearing the fault in five (5) cycles (t = 1.383 seconds).
-The active power, reactive power, three phase voltage, RMS voltage,
-trip code of the turbines within the WP as well as three phase currents
-at the POI of the project were all monitored for 10 seconds. 
+the bolted three phase to ground fault on the midpoint of the transmission
+line from A to B and then clearing the fault in five (5) cycles (t
+= 1.383 seconds). The active power, reactive power, three phase voltage,
+RMS voltage, as well as three phase currents at the POI of the project
+were all monitored for ten (10) seconds. 
 
 Analysis revealed that the WP will trip offline following clearing
-of the fault on the line A-B for all of the scenarios considered.
-In some cases, the project would trip due to overcurrent while in
-other cases the trip was due to overvoltage. The current output of
-the project, MW and MVAr as well as the POI voltage are shown in \figref{Output-current-of},
-\figref{Active-and-reactive} and \figref{Voltage-at-POI}, respectively.
+of the fault on the transmission line from A to B for all of the scenarios
+considered. In some cases, the project would trip due to overcurrent
+while in other cases the trip was due to overvoltage. The current
+output of the project, MW and MVAr as well as the POI voltage are
+shown in \figref{Output-current-of}, \figref{Active-and-reactive}
+and \figref{Voltage-at-POI}, respectively. 
 \begin{figure}[h]
 \begin{centering}
 \includegraphics[scale=0.6]{artwork/currents}
@@ -406,7 +402,6 @@ the project, MW and MVAr as well as the POI voltage are shown in \figref{Output-
 \par\end{centering}
 \end{figure}
 \begin{figure}[h]
-
 \begin{centering}
 \includegraphics[scale=0.6]{artwork/voltage}\caption{Voltage at POI \label{fig:Voltage-at-POI}}
 \par\end{centering}
@@ -427,24 +422,26 @@ Root cause analysis has shown that the reactive power is being pushed
 from the series capacitor banks to the project after clearing the
 fault. The TSO has designed the protection of all of the series capacitor
 banks in the system such that they ride through the most severe fault.
-A fault in line A-B is not an exception to this. This is mainly done
-for stability enhancement and increasing the power transfer capability
-in the region under certain loading and generation scenarios. 
+A fault on the transmission line from A to B is not an exception to
+this. This is mainly done for stability enhancement and increasing
+the power transfer capability in the region under certain loading
+and generation scenarios. 
 
 The problem can be understood by referring to \figref{Fault-and-clearing}.
-In this figure, it can be seen that once the fault occurs on line
-A-B, the voltage across the capacitor banks become close to full line
-to line voltage of 345 kV and the capacitor bank store a massive amount
-of reactive power as a result. However, once the fault is cleared
-by opening the circuit breakers at both ends of the line A-B, the
-voltage across the capacitor bank returns to normal which is around
-27 kV. Since the voltage across the capacitor cannot change instantaneously,
-the capacitor bank releases the previously stored energy back to the
-system in both directions and the voltage across the capacitor bank
-starts to overshoot. Since the WP is radially connected and very close
-electrically to the series capacitor banks, it attracts most of the
-reactive power. The reactive power absorbed greatly exceeds capability
-of the the turbines and they trip offline as a result. 
+In this figure, it can be seen that once the fault occurs on the transmission
+line from A to B, the voltage across the capacitor banks become close
+to the rated line to line voltage of 345 kV and the capacitor bank
+stores a massive amount of reactive power as a result. However, once
+the fault is cleared by opening the circuit breakers at both ends
+of the transmission line from A to B, the voltage across the capacitor
+bank returns to normal which is around 27 kV. Since the voltage across
+the capacitor cannot change instantaneously, the capacitor bank releases
+the previously stored energy back to the system in both directions
+and the voltage across the capacitor bank starts to overshoot. Since
+the WP is radially connected and very close electrically to the series
+capacitor banks, it attracts most of the reactive power. The reactive
+power absorbed greatly exceeds capability of the the turbines and
+they trip offline as a result. 
 \begin{figure}[h]
 \begin{centering}
 \includegraphics[scale=0.6]{artwork/cap}\caption{Clearing the fault on line A-B\label{fig:Fault-and-clearing}}
@@ -454,24 +451,19 @@ of the the turbines and they trip offline as a result.
 
 \section{Conclusions \label{sec:Conclusions}}
 
-An study has been performed to assess whether the WP under construction
+A study has been performed to assess whether the WP under construction
 will be susceptible to SSO. A frequency scan screening study was performed
 and indicated that the WP is unlikely to suffer SSO even though is
 right next door to a large series compensation device. A detailed
 EMT study was performed to to confirm the findings of the frequency
 scan screening study. EMT simulations showed that the project will
-trip after clearing the fault on one line the outage of which will
-cause the project to be radially connected to the series compensation
-capacitor. Investigations were carried out to understand the nature
-of this trip. The authors concluded that the trip is due to the high
-voltage and reactive power surge coming back from the series capacitors
-after the fault is cleared. The project was thus not susceptible to
-SSO. The ISO was notified of the findings and approved the study. 
-
-\section*{Acknowledgment }
-
-The authors would like to thank Dustin Howard and Nath Venkit of GE
-for their help and support throughout the study. 
+trip after clearing the fault on the transmission line that will cause
+the project to be radially connected to the series compensation capacitor.
+Investigations were carried out to understand the nature of this trip.
+The authors concluded that the trip is due to the high voltage and
+reactive power surge coming back from the series capacitors after
+the fault is cleared. The project was thus not susceptible to SSO.
+The ISO was notified of the findings and approved the study. 
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
